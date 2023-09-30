@@ -8,20 +8,17 @@
   --font-base: "Roboto", sans-serif;
 }
 
-* {
+/* * {
   outline: 1px solid red;
-}
+} */
 
 body {
   color: var(--color-main);
   background-color: transparent;
   font-family: var(--font-base);
+  font-size: 20px;
   text-align: center;
   min-height: 100vh;
-}
-
-main {
-  height: 50rem;
 }
 
 header,
@@ -53,6 +50,38 @@ header {
   justify-content: space-around;
 }
 
+main {
+  padding: 15rem 0;
+  margin: 0 auto;
+}
+
+.profile-wrapper > * + * {
+  margin-top: 1rem;
+}
+
+.button-wrapper > * + * {
+  margin-top: 0.5rem;
+}
+
+button {
+  color: var(--color-secondary);
+  padding: 0.25rem 1rem;
+  border-radius: 30px;
+  border: 2px solid var(--color-secondary);
+  margin-bottom: 1rem;
+}
+
+button:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-light);
+}
+
+.profile-pic {
+  margin: 1rem auto;
+  width: 100px;
+  border-radius: 50%;
+}
+
 @media only screen and (min-width: 700px) {
   header,
   footer {
@@ -78,12 +107,24 @@ header {
     order: 1;
   }
 
-  .links {
+  .links,
+  .wrapper {
     display: flex;
     justify-content: center;
   }
 
-  .links > * + * {
+  .links > * + *,
+  .wrapper > * + * {
     margin-left: 1rem;
+  }
+
+  main {
+    padding-top: 10rem;
+    max-width: 50rem;
+  }
+
+  .profile-wrapper {
+    width: 300px;
+    margin-left: 5rem;
   }
 }
