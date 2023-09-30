@@ -19,15 +19,50 @@
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/topics.html">Topics</a></li>
                 <li><a href="/index.html#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <article></article>
-        <article></article>
-        <article></article>
-        <article></article>
+        <section id="intro" class="section-wrapper">
+            <h2 class="heading">Topics of interest</h2>
+            <p>Some of the most interesting topics related to the web are the manners in which security weaknesses on websites can be exploited for nefarious purposes. Here are some of the most common security threats for pages facing the web.</p>
+            <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security">
+                <a class="link-topic-intro" href="#topics">
+                    <p>Learn more <i class="fa fa-arrow-down" aria-hidden="true"></i></p>
+                </a>
+            </a>
+        </section>
+        <section id="topics" class="section-wrapper">
+            <article class="topic">
+                <iframe class="video" title="Youtube video on Cross-Site Scription, by Computerphile" src="https://www.youtube.com/embed/L5l9lSnNMxg?si=aOWkKwIq_YA86qKA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div>
+                    <h3 class="heading">Cross-Site Scripting (XSS)</h3>
+                    <p>XSS is a term used to describe a class of attacks that allow an attacker to inject client-side scripts through the website into the browsers of other users. Because the injected code comes to the browser from the site, the code is trusted and can do things like send the user's site authorization cookie to the attacker.</p>
+                </div>
+            </article>
+            <article class="topic reverse colors-reverse">
+                <iframe class="video" title="Youtube video on SQL Injection, by Computerphile" src="https://www.youtube.com/embed/_jKylhJtPmI?si=MSrZyk6NdAU6IKar" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div>
+                    <h3 class="heading">SQL Injection</h3>
+                    <p>SQL injection vulnerabilities enable malicious users to execute arbitrary SQL code on a database, allowing data to be accessed, modified, or deleted irrespective of the user's permissions.</p>
+                </div>
+            </article>
+            <article class="topic">
+                <iframe class="video" title="Youtube video on Cross-Site Request forgery, by Computerphile" src="https://www.youtube.com/embed/vRBihr41JTo?si=0wM1JL90QPuSyctl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div>
+                    <h3 class="heading">Cross-Site Request Forgery (CSRF)</h3>
+                    <p>CSRF attacks allow a malicious user to execute actions using the credentials of another user without that user's knowledge or consent.</p>
+                </div>
+            </article>
+        </section>
+        <section class="section-wrapper">
+            <a class="link-topic-intro" href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security" target="_blank">
+                <p>Further reading <i class="fa fa-external-link" aria-hidden="true"></i></p>
+            </a>
+            <a class="link-topic-intro" href="#intro">
+                <p>Back to top <i class="fa fa-arrow-up" aria-hidden="true"></i></p>
+            </a>
+        </section>
     </main>
     <footer id="contact">
         <div class="nav">

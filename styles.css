@@ -1,17 +1,17 @@
+/*custom properties*/
+
 :root {
   --color-main: #353535;
   --color-accent: #284b63;
   --color-secondary: #3c6e71;
   --color-light: #ffffff;
-  --color-body: #D9D9D9;
+  --color-body: #d9d9d9;
 
   --font-headings: "Helvetica", sans-serif;
   --font-base: "Roboto", sans-serif;
 }
 
-/* * {
-  outline: 1px solid red;
-} */
+/*layout*/
 
 body {
   color: var(--color-main);
@@ -57,12 +57,30 @@ main {
   margin: 0 auto;
 }
 
+.section-wrapper {
+  background-color: var(--color-light);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.section-wrapper > * + * {
+  margin-top: 1rem;
+}
+
 .profile-wrapper > * + * {
   margin-top: 1rem;
 }
 
 .button-wrapper > * + * {
   margin-top: 0.5rem;
+}
+
+/*elements*/
+
+section[id] {
+  scroll-margin-top: 10rem;
 }
 
 button {
@@ -84,34 +102,47 @@ button:hover {
   border-radius: 50%;
 }
 
-.section-wrapper {
-    background-color: var(--color-light);
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+.link-topic-intro {
+  font-size: medium;
+  color: var(--color-secondary);
 }
 
-.section-wrapper > * + * {
-    margin-top: 1rem;
+a:hover {
+  opacity: 0.7;
 }
+
+.topic {
+  margin: 3rem 0;
+  padding: 3rem 0;
+}
+
+.topic div {
+  margin-top: 1rem;
+}
+
+.topic p {
+  margin-top: 1rem;
+}
+
+/*utilities*/
 
 .colors-reverse {
-    color: var(--color-light);
-    background-color: var(--color-accent);
+  color: var(--color-light);
+  background-color: var(--color-accent);
 }
 
-.colors-reverse > * {
-    color: var(--color-light);
-    background-color: var(--color-accent);
+.colors-reverse * {
+  color: var(--color-light);
+  background-color: var(--color-accent);
 }
 
 .align-left {
-    text-align: left;
+  text-align: left;
 }
 
-@media only screen and (min-width: 700px) {
+/*media queries*/
 
+@media only screen and (min-width: 700px) {
   body {
     background-color: var(--color-body, lightgrey);
   }
@@ -156,8 +187,59 @@ button:hover {
     max-width: 50rem;
   }
 
+  section[id] {
+    scroll-margin-top: 3rem;
+  }
+
+  .section-wrapper {
+    background-color: var(--color-light);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .section-wrapper#topics {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+  .section-wrapper#topics article {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .profile-wrapper {
     width: 300px;
     margin-left: 5rem;
+  }
+
+  .topic {
+    display: flex;
+    padding: 5rem 0;
+  }
+
+  .topic div {
+    margin-left: 1rem;
+  }
+
+  .topic p {
+    margin-top: 1rem;
+  }
+
+  .topic.reverse div {
+    order: 1;
+    margin-left: 0rem;
+    margin-right: 1rem;
+  }
+
+  .topic.reverse .video {
+    order: 2;
+  }
+
+  .video {
+    height: 15rem;
+    width: 50rem;
+    align-self: center;
   }
 }
