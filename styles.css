@@ -3,6 +3,7 @@
   --color-accent: #284b63;
   --color-secondary: #3c6e71;
   --color-light: #ffffff;
+  --color-body: #D9D9D9;
 
   --font-headings: "Helvetica", sans-serif;
   --font-base: "Roboto", sans-serif;
@@ -43,6 +44,7 @@ header {
 
 .heading {
   font-family: var(--font-headings);
+  color: var(--color-secondary);
 }
 
 .links {
@@ -51,7 +53,7 @@ header {
 }
 
 main {
-  padding: 15rem 0;
+  padding-top: 10rem;
   margin: 0 auto;
 }
 
@@ -82,7 +84,38 @@ button:hover {
   border-radius: 50%;
 }
 
+.section-wrapper {
+    background-color: var(--color-light);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.section-wrapper > * + * {
+    margin-top: 1rem;
+}
+
+.colors-reverse {
+    color: var(--color-light);
+    background-color: var(--color-accent);
+}
+
+.colors-reverse > * {
+    color: var(--color-light);
+    background-color: var(--color-accent);
+}
+
+.align-left {
+    text-align: left;
+}
+
 @media only screen and (min-width: 700px) {
+
+  body {
+    background-color: var(--color-body, lightgrey);
+  }
+
   header,
   footer {
     flex-direction: row;
@@ -119,7 +152,7 @@ button:hover {
   }
 
   main {
-    padding-top: 10rem;
+    padding-top: 5rem;
     max-width: 50rem;
   }
 
